@@ -7,13 +7,15 @@
 </head>
 <body>
     <form id = "monFormulaire">
-        <script>
-            document.createElement("label").innerHTML = "Entrez l'item recherché";
-            document.getElementsByName("label").id = "label";
-            insertBefore(document.createElement("label"), document.createElement("input"));
-            document.getElementById("label").appendChild(document.getElementById("monFormulaire"));
-        </script>
-        <input type = "text">Saisie</input>
+        <input type = "text" id = "input1"></input>
     </form>
+    <script>
+        var lbl = document.createElement("label");
+        var form = document.getElementById("monFormulaire");
+        lbl.id = "label1";
+        var txtlbl = document.createTextNode("Entrez l'item recherché :");
+        lbl.appendChild(txtlbl);
+        form.appendChild(lbl);
+    </script>
 </body>
 </html>
