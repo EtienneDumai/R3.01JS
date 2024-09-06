@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD2</title>
+</head>
+<body>
+    <form id = "monFormulaire">
+        <script>
+            document.createElement("label").innerHTML = "Entrez l'item recherché";
+            document.getElementsByName("label").id = "label";
+            insertBefore(document.createElement("label"), document.createElement("input"));
+            document.getElementById("label").appendChild(document.getElementById("monFormulaire"));
+        </script>
+        <input type = "text">Saisie</input>
+    </form>
+</body>
+</html>
