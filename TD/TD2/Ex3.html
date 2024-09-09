@@ -7,106 +7,103 @@
 </head>
 
 <body>
-    <ul>
-        <div class="cat">
-            <li>Annélides</li>
-        </div>
-        <div class="cat">
-            <li>Vertébrés
+    <div class="niveau_0">
+        <ul>
+            <div class="niveau_1">
+                <li>Annélides</li>
+            </div>
+            <div class="niveau_1">
+                <li>Vertébrés
+                    <ul>
+                        <div class="niveau_2">
+                            <li>Avec squelette</li>
+                            <ul>
+                                <div class="niveau_3">
+                                    <li>Amphibiens</li>
+                                </div>
+                                <div class="niveau_3">
+                                    <li>Crocodiliens</li>
+                                </div>
+                                <div class="niveau_3">
+                                    <li>Mammifères</li>
+                                </div>
+                                <div class="niveau_3">
+                                    <li>Oiseaux</li>
+                                </div>
+                                <div class="niveau_3">
+                                    <li>Poissons</li>
+                                </div>
+                                <div class="niveau_3">
+                                    <li>Serpents et Lésards</li>
+                                </div>
+                                <div class="niveau_3">
+                                    <li>Tortues</li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="niveau_2">
+                            <li>Sans squelette</li>
+                            <ul>
+                                <div class="niveau_3">
+                                    <li>Poissons</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+            <div class="niveau_1">
+                <li>Athropodes</li>
                 <ul>
-                    <div class="tag-2">
-                        <li>Avec squelette</li>
+                    <div class="niveau_2">
+                        <li>Arachnides</li>
                     </div>
-                    <div class="tag-2">
-                        <ul>
-                            <div class="tag-3">
-                                <li>Amphibiens</li>
-                            </div>
-                            <div class="tag-3">
-                                <li>Crocodiliens</li>
-                            </div>
-                            <div class="tag-3">
-                                <li>Mammifères</li>
-                            </div>
-                            <div class="tag-3">
-                                <li>Oiseaux</li>
-                            </div>
-                            <div class="tag-3">
-                                <li>Poissons</li>
-                            </div>
-                            <div class="tag-3">
-                                <li>Serpents et Lésards</li>
-                            </div>
-                            <div class="tag-3">
-                                <li>Tortues</li>
-                            </div>
-                        </ul>
+                    <div class="niveau_2">
+                        <li>Crustacés</li>
                     </div>
-                    <div class="tag-2">
-                        <li>Sans squelette</li>
+                    <div class="niveau_2">
+                        <li>Insectes</li>
                     </div>
-                    <div class="tag-2">
-                        <ul>
-                            <div class="tag-3">
-                                <li>Poissons</li>
-                            </div>
-                        </ul>
+                    <div class="niveau_2">
+                        <li>Myriapodes</li>
                     </div>
                 </ul>
-            </li>
-        </div>
-        <div class="cat">
-            <li>Athropodes</li>
-        </div>
-        <div class="cat">
-            <ul>
-                <div class="tag-2">
-                    <li>Arachnides</li>
-                </div>
-                <div class="tag-2">
-                    <li>Crustacés</li>
-                </div>
-                <div class="tag-2">
-                    <li>Insectes</li>
-                </div>
-                <div class="tag-2">
-                    <li>Myriapodes</li>
-                </div>
-            </ul>
-        </div>
-        <div class="cat">
-            <li>Mollusques</li>
-        </div>
-        <div class="cat">
-            <ul>
-                <div class="tag-2">
-                    <li>Bivalves</li>
-                </div>
-                <div class="tag-2">
-                    <li>Céphalopodes</li>
-                </div>
-                <div class="tag-2">
-                    <li>Gasteropodes</li>
-                </div>
-            </ul>
-        </div>
-        <div class="cat">
-            <li>Cnidaires</li>
-        </div>
-    </ul>
+            </div>
+            <div class="niveau_1">
+                <li>Mollusques</li>
+                <ul>
+                    <div class="niveau_2">
+                        <li>Bivalves</li>
+                    </div>
+                    <div class="niveau_2">
+                        <li>Céphalopodes</li>
+                    </div>
+                    <div class="niveau_2">
+                        <li>Gasteropodes</li>
+                    </div>
+                </ul>
+            </div>
+            <div class="niveau_1">
+                <li>Cnidaires</li>
+            </div>
+        </ul>
+    </div>
 
     <script>
-        var divs = document.querySelectorAll('.countable');
-        var count = 1;
-        divs.forEach(function(div) {
-            var tag = document.createElement('div');
-            tag.classList.add('tag-' + count);
-            div.parentNode.insertBefore(tag, div);
-            count++;
-        });
+        function compteDescendants(labalise) {
+            var nombreDescendants = 0;
+            var lesElements = document.getElementsByClassName(labalise);
+
+            for (e of lesElements) {
+                console.log(e);
+                console.log(nombreDescendants);
+                nombreDescendants += 1;
+            }
+            return nombreDescendants;
+        }
     </script>
 </body>
 
 <script>
-    
+
 </script>
