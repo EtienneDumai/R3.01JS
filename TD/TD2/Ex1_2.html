@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD2</title>
+</head>
+
+<body>
+    <form id="monFormulaire">
+        <input type="text" id="input1"></input>
+    </form>
+    <script>
+        var vbody = document.body;
+        var lbl = document.createElement("label");
+        var form = document.getElementById("monFormulaire");
+        lbl.id = "label1";
+        var txtlbl = document.createTextNode("Entrez l'item recherché :");
+        lbl.appendChild(txtlbl);
+        vbody.insertBefore(lbl, form);
+        //Déclare une fonction appélée compteFilsEtNoeud qui prend en paramètre une balise HTML et qui retourne un 
+        //tableau de tableaux contenant le nombre de fils et le nombre de noeuds de chaque élément de la page qui porte cette balise.
+        function compteFilsEtNoeud(labalise) {
+            //Déclaration d'un tableau
+            var tableResultat = new Array();
+            //Récupération des éléments de la page qui portent la balise html
+            var lesElements = document.getElementsByTagName(labalise);
+            //Parcours des éléments
+            for (e of lesElements) {
+                //Récupération du nombre de fils 
+                var r1 = e.childElementCount;
+                //Récupération du nombre de noeuds
+                var r2 = e.childNodes.length;
+                //Ajout des résultats dans le tableau
+                tableResultat.push([r1, r2]);
+            }
+            //Retourne le tableau entier
+            return tableResultat;
+        }
+        compteFilsEtNoeud("ul");
+    </script>
+
+</body>
+
+</html>

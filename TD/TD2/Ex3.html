@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TD2 - Exercice 3</title>
+</head>
+
+<body>
+    <ul>
+        <div class="cat">
+            <li>Annélides</li>
+        </div>
+        <div class="cat">
+            <li>Vertébrés
+                <ul>
+                    <div class="tag-2">
+                        <li>Avec squelette</li>
+                    </div>
+                    <div class="tag-2">
+                        <ul>
+                            <div class="tag-3">
+                                <li>Amphibiens</li>
+                            </div>
+                            <div class="tag-3">
+                                <li>Crocodiliens</li>
+                            </div>
+                            <div class="tag-3">
+                                <li>Mammifères</li>
+                            </div>
+                            <div class="tag-3">
+                                <li>Oiseaux</li>
+                            </div>
+                            <div class="tag-3">
+                                <li>Poissons</li>
+                            </div>
+                            <div class="tag-3">
+                                <li>Serpents et Lésards</li>
+                            </div>
+                            <div class="tag-3">
+                                <li>Tortues</li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tag-2">
+                        <li>Sans squelette</li>
+                    </div>
+                    <div class="tag-2">
+                        <ul>
+                            <div class="tag-3">
+                                <li>Poissons</li>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+            </li>
+        </div>
+        <div class="cat">
+            <li>Athropodes</li>
+        </div>
+        <div class="cat">
+            <ul>
+                <div class="tag-2">
+                    <li>Arachnides</li>
+                </div>
+                <div class="tag-2">
+                    <li>Crustacés</li>
+                </div>
+                <div class="tag-2">
+                    <li>Insectes</li>
+                </div>
+                <div class="tag-2">
+                    <li>Myriapodes</li>
+                </div>
+            </ul>
+        </div>
+        <div class="cat">
+            <li>Mollusques</li>
+        </div>
+        <div class="cat">
+            <ul>
+                <div class="tag-2">
+                    <li>Bivalves</li>
+                </div>
+                <div class="tag-2">
+                    <li>Céphalopodes</li>
+                </div>
+                <div class="tag-2">
+                    <li>Gasteropodes</li>
+                </div>
+            </ul>
+        </div>
+        <div class="cat">
+            <li>Cnidaires</li>
+        </div>
+    </ul>
+
+    <script>
+        var divs = document.querySelectorAll('.countable');
+        var count = 1;
+        divs.forEach(function(div) {
+            var tag = document.createElement('div');
+            tag.classList.add('tag-' + count);
+            div.parentNode.insertBefore(tag, div);
+            count++;
+        });
+    </script>
+</body>
+
+<script>
+    
+</script>
