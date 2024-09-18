@@ -24,10 +24,10 @@ function getHeadersQ4() {
     let headers = document.querySelectorAll('.table thead th'); headers.forEach(e => { console.log(e.textContent); });
 }
 
-function applyBorderStyleQ5(){
+function applyBorderStyleQ5() {
     document.getElementByTagName("table").style.border = "1px solid black";
 }
-function applyBoderStyleByClassNameQ6(){
+function applyBoderStyleByClassNameQ6() {
     document.getElementByClassName("table").style.border = "1px solid black";
 }
 function changeValueQ7(classe) {
@@ -74,6 +74,17 @@ function knowId() {
     const cardId = cardElement.id;
     console.log(cardId);
 }
-function Q10(params) {
+function Q10() {
+    let newElement = document.createElement("li");
+    newElement.className = "list-group-item";
+    newElement.textContent = "Item 3 ";
+
+    let Button = document.createElement("button");
+    Button.textContent = "X";
+
+    newElement.appendChild(Button);
+
+    document.querySelector(".list-group").appendChild(newElement);
     
 }
+Q10();
