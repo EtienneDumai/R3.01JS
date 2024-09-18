@@ -1,3 +1,26 @@
+//Exercice 5
+//Déclaration de la fonction CSS.
+function CSS() {
+    //Déclaration de la variable e qui récupère l'élément ayant l'identifiant "items".
+    let e=document.getElementById("items");
+    //Modification de la taille de la police.
+    e.style.fontSize="12px";
+    //modification de la couleur de l'élément.
+    e.style.color = "blue";
+    //Décalaration de la variable e2 qui récupère l'élément ayant l'identifiant "monFormulaire".
+    let e2=document.getElementByName("monFormulaire");
+    //Modification du nom de la classe de l'élément e2 par "gros"
+    e2.className= "gros";
+    //Affichage de la classe de l'élément e2 avec un warn.
+    console.warn(e2.className);
+}
+//Appel de la fonction CSS.
+CSS();
+function masquerLi(valeurId) {
+    let el1 = document.getElementById(valeurId);
+    el1.style.display = "none";
+}
+masquerLi();
 
 
 //La première instruction `console.log` récupère la valeur du deuxième élément enfant de l'élément ayant l'identifiant "addForm".
@@ -17,7 +40,7 @@ function recupClassQ2(idcherche) {
     console.log(document.getElementById(idcherche).parentNode.children[1].className);
 }
 function recupNameQ3(namecherche) {
-    console.log(document.getElementByName(namecher > che).type);
+    console.log(document.getElementByName(namecherche > che).type);
 }
 function getHeadersQ4() {
 
